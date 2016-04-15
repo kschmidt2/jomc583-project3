@@ -168,7 +168,7 @@ d3.json('js/data.json', function(err, data) {
       svg2.selectAll("dot")
             .data(data.filter(function(d) { return !isNaN(d.velocity); }))
         .enter().append("circle")
-            .attr("r", 5)
+            .attr("r", 7)
             .attr("cx", valueline.x())
             .attr("cy", valueline.y())
             .on('mouseover', tipLine.show)
