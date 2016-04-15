@@ -56,8 +56,6 @@ var svg2 = d3.select("svg")
 // load data
 d3.json('js/data.json', function(err, data) {
   dataset = data;
-  //console.log(err);
-  //console.log(data);
 
 
     color.domain(d3.keys(data[0]).filter(function(key) { return key !== "season" && key !== "velocity";}));
@@ -68,10 +66,8 @@ d3.json('js/data.json', function(err, data) {
         d.types = color.domain().map(function(type) { return {season: d.season, looking: d.looking, swinging: d.swinging, total: d.total, type: type, y0: y0, y1: y0 += +d[type]}; });
         d.season = +d.season;
         d.velocity = +d.velocity;
-        // console.log(d.velocity);
       });
 
-      // console.log(data);
 
       var tip = d3.tip()
           .attr('class', 'd3-tip')
@@ -82,8 +78,6 @@ d3.json('js/data.json', function(err, data) {
           })
 
       svg.call(tip);
-
-      // data.sort(function(a, b) { return b.total - a.total; });
 
       x.domain(data.map(function(d) { return d.season; }));
       y.domain([0, d3.max(data, function(d) { return d.total; })]);
@@ -145,7 +139,6 @@ d3.json('js/data.json', function(err, data) {
           .text(function(d) { return d; });
 
       // line chart
-
       y.domain([88, 93]);
 
       var tipLine = d3.tip()
@@ -162,9 +155,6 @@ d3.json('js/data.json', function(err, data) {
           .attr("class", "line")
           .attr("d", valueline(data));
 
-            // console.log(d.season);
-            // console.log(d.velocity);
-
       svg2.selectAll("dot")
             .data(data.filter(function(d) { return !isNaN(d.velocity); }))
         .enter().append("circle")
@@ -173,7 +163,6 @@ d3.json('js/data.json', function(err, data) {
             .attr("cy", valueline.y())
             .on('mouseover', tipLine.show)
             .on('mouseout', tipLine.hide);
-
 
         // Add the Y Axis
         svg2.append("g")
@@ -192,35 +181,3 @@ d3.json('js/data.json', function(err, data) {
             .style("fill", "#dc5357")
             .text("Velocity (mph)");
 });
-
-
-
-
-//
-// var xScale = d3.scale.ordinal()
-//       .domain(d3.range(0, chartdata.length))
-//       .rangeBands([0, width])
-//
-// var yScale = d3.scale.linear()
-//       .domain([0, 30000])
-//       .range([0, height])
-//
-// d3.select('#chart').append('svg')
-//     .attr('width', width + '%')
-//     .attr('height', height)
-//     .style('border', '1px solid black')
-//     .append('g')
-//     .selectAll('rect').data(chartdata)
-//     .enter().append('rect')
-//         .style('fill', 'red')
-//         .attr('width', xScale.rangeBand() - barOffset)
-//         .attr('height', function(d){
-//           return yScale(d);
-//         })
-//         .attr('x', function(d,i){
-//           // return i * (barWidth + barOffset);
-//           return xScale(i);
-//         })
-//         .attr('y', function(d){
-//           return height - yScale(d);
-//         })
