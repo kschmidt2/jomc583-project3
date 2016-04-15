@@ -6,10 +6,15 @@ h1 {
   font-weight: 300;
   font-size: 2em;
   font-family: 'Merriweather';
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container {
   text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 p {
@@ -25,7 +30,7 @@ p {
 #chart {
   margin-right: auto;
   margin-left: auto;
-  max-width: 800px;
+  width: 800px;
 }
 
 svg {
@@ -165,4 +170,11 @@ circle:hover {
 
 #credit a {
   color: #60968e;
+}
+
+/*correcting media queries*/
+@media (min-width: 768px) {
+  .container {
+    width: auto;
+  }
 }
