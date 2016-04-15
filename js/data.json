@@ -1,0 +1,106 @@
+[
+  {
+  "season": "1998",
+  "swinging": 22416,
+  "looking": 9309
+  },
+  {
+  "season": "1999",
+  "swinging": 22571,
+  "looking": 8428
+  },
+  {
+  "season": "2000",
+  "swinging": 22555,
+  "looking": 8674
+  },
+  {
+  "season": "2001",
+  "swinging": 23175,
+  "looking": 9124
+  },
+  {
+  "season": "2002",
+  "swinging": 23029,
+  "looking": 8257,
+  "velocity": 89.0
+  },
+  {
+  "season": "2003",
+  "swinging": 22619,
+  "looking": 8058,
+  "velocity": 89.6
+  },
+  {
+  "season": "2004",
+  "swinging": 23342,
+  "looking": 8371,
+  "velocity": 90.1
+  },
+  {
+  "season": "2005",
+  "swinging": 22385,
+  "looking": 8134,
+  "velocity": 90.1
+  },
+  {
+  "season": "2006",
+  "swinging": 23579,
+  "looking": 7967,
+  "velocity": 90.5
+  },
+  {
+  "season": "2007",
+  "swinging": 23907,
+  "looking": 8170,
+  "velocity": 90.3
+  },
+  {
+  "season": "2008",
+  "swinging": 24385,
+  "looking": 8377,
+  "velocity": 90.7
+  },
+  {
+  "season": "2009",
+  "swinging": 25039,
+  "looking": 8451,
+  "velocity": 91.2
+  },
+  {
+  "season": "2010",
+  "swinging": 25772,
+  "looking": 8436,
+  "velocity": 91.2
+  },
+  {
+  "season": "2011",
+  "swinging": 26021,
+  "looking": 8346,
+  "velocity": 91.5
+  },
+  {
+  "season": "2012",
+  "swinging": 27493,
+  "looking": 8801,
+  "velocity": 91.6
+  },
+  {
+  "season": "2013",
+  "swinging": 27946,
+  "looking": 8653,
+  "velocity": 91.7
+  },
+  {
+  "season": "2014",
+  "swinging": 28102,
+  "looking": 9200,
+  "velocity": 91.8
+  },
+  {
+  "season": "2015",
+  "swinging": 28592,
+  "looking": 8728,
+  "velocity": 92.1
+  }
+]

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Major League Baseball strikeouts</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Strikeouts and Fastball Velocity in MLB, 1998-2015</h1>
+    <p>Strikeouts have been on the rise in Major League Baseball over the past few seasons as more power arms throwing harder than ever enter the league. Led by pitchers such as Aroldis Chapman in the bullpen (98.8 average fastball velocity) and Stephen Strasburg in the rotation (95.5), pitch velocity has been on the rise since Pitch f/x began tracking the data in 2002. View the chart below, which shows strikeout data since the last MLB expansion in 1998, to see how the rise in strikeouts correlates with the rise in fastball velocity. Use the buttons to view the charts individually or together.</p>
+
+    <button type="button" class="btn btn-primary active" id="strikeout-button" data-toggle="button" aria-pressed="true" autocomplete="off">
+      Strikeouts
+    </button>
+    <button type="button" class="btn btn-primary active" id="velocity-button" data-toggle="button" aria-pressed="true" autocomplete="off">
+      Velocity
+    </button>
+
+    <div id="chart">
+    </div>
+    <div id="credit">
+      Chart by Kiersten Schmidt. Created using d3.js. Strikeout data from <a href="http://baseball-reference.com">Baseball-Reference</a> and velocity data from <a href="http://fangraphs.com">Fangraphs</a>.
+    </div>
+  </div>
+
+  <!-- d3 -->
+  <script src="js/d3.min.js"></script>
+  <!-- d3 tip -->
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  <!-- chart -->
+  <script src="js/barchart.js"></script>
+  <!-- jquery -->
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <!-- bootstrap -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <script>
+    $('#strikeout-button').on('click', function () {
+      $().button('toggle');
+      $('#bar-chart').toggle()
+    });
+    $('#velocity-button').on('click', function () {
+      $().button('toggle');
+      $('#line-chart').toggle()
+    });
+  </script>
+</body>
+</html>
