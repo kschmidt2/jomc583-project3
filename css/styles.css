@@ -120,6 +120,12 @@ circle {
   fill: #dc5357;
 }
 
+circle:hover {
+  fill: #faf3e1;
+  stroke: #dc5357;
+  stroke-width: 2px;
+}
+
 .velocity {
   margin: 2000px;;
 }
